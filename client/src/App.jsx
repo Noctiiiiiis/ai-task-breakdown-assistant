@@ -18,7 +18,7 @@ export default function App() {
 
     try {
       setLoading(true);
-      const response = await fetch("/api/generate-plan", {
+      const response = await fetch("https://ai-task-breakdown-assistant.onrender.com/api/generate-plan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ goal }),
