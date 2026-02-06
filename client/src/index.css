@@ -24,8 +24,16 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top, rgba(252, 163, 17, 0.15), transparent 45%),
-    linear-gradient(160deg, #000000 0%, #0b1426 45%, #14213d 100%);
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.32), transparent 46%),
+    radial-gradient(circle at top left, rgba(0, 0, 0, 0.82), transparent 56%),
+    radial-gradient(circle at top right, rgba(0, 0, 0, 0.78), transparent 54%),
+    radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.78), transparent 53%),
+    radial-gradient(circle at top left, rgba(29, 78, 216, 0.2), transparent 48%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.18), transparent 45%),
+    radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.2), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(2, 132, 199, 0.18), transparent 43%),
+    linear-gradient(165deg, #000000 0%, #050a16 45%, #0b132a 100%);
 }
 
 .page {
@@ -34,6 +42,7 @@ body {
   justify-content: center;
   padding: 64px 20px 88px;
   color: var(--gray);
+  position: relative;
 }
 
 .container {
@@ -41,6 +50,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -72,17 +83,20 @@ h1 {
 }
 
 .card {
-  background: linear-gradient(160deg, rgba(20, 33, 61, 0.95), rgba(0, 0, 0, 0.9));
+  background: rgba(12, 18, 36, 0.78);
   border-radius: 18px;
   padding: 24px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(252, 163, 17, 0.18);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-1px);
-  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 36px 70px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .input-card {
   display: flex;
