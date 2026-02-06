@@ -30,7 +30,7 @@ app.post("/api/generate-plan", async (req, res) => {
     return res.json({ plan });
   } catch (error) {
     console.error("Plan generation failed:", error);
-    return res.status(500).json({ error: "Failed to generate plan. Try again." });
+    return res.status(500).json({ error: "Server is starting up. Please try again in a few seconds." });
   }
 });
 
